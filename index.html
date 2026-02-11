@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience the thrill of indoor skydiving. Safe, controlled, and exhilarating flight experiences for all skill levels.">
+  <meta name="keywords" content="indoor skydiving, skydiving facility, flight training, adventure sports">
+  <title>SkyVenture - Indoor Skydiving Facility | Fly Without Limits</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/dark-mode.css">
+  <link rel="stylesheet" href="./assets/css/rtl.css">
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand">
+        <span>🪂</span>
+        <span>SKYVENTURE</span>
+      </a>
+      
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home2.html">Home 2</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./experiences.html">Experiences</a></li>
+        <!-- <li><a href="./packages.html">Packages</a></li> -->
+        <li><a href="./training.html">Training</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li class="mobile-only"><a href="./booking.html" class="btn btn-primary btn-sm">Book Now</a></li>
+      </ul>
+      
+      <div class="navbar-actions">
+        <a href="./booking.html" class="btn btn-primary btn-sm desktop-only">Book Now</a>
+        
+        <div class="toggle-group">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle Dark/Light Mode">
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+          
+          <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR" title="Toggle Right-to-Left/Left-to-Right">
+            <i class="fas fa-language"></i>
+          </button>
+        </div>
+        
+        <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-certificate"></i>
+          <span>World-Class Indoor Skydiving Experience</span>
+        </div>
+        
+        <h1>Defy Gravity. Experience Flight.</h1>
+        
+        <p>Feel the rush of freefall in a safe, controlled environment. No plane. No parachute. Just pure flying freedom. Perfect for beginners and pros alike.</p>
+        
+        <div class="hero-actions">
+          <a href="./booking.html" class="btn btn-primary btn-lg" data-testid="hero-book-flight-btn">
+            <i class="fas fa-calendar-check"></i>
+            Book Your Flight
+          </a>
+          <a href="./experiences.html" class="btn btn-outline btn-lg" data-testid="hero-learn-more-btn">
+            <i class="fas fa-info-circle"></i>
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Indoor Skydiving -->
+  <section class="section" data-testid="what-is-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>What is Indoor Skydiving?</h2>
+        <p class="text-muted">Experience the sensation of freefall without jumping from a plane</p>
+      </div>
+      
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <img src="https://images.unsplash.com/photo-1696127140771-ff7f4c939615?w=800" alt="Indoor Skydiving Experience" class="rounded" style="width: 100%; height: auto; border-radius: 1rem;">
+        </div>
+        <div class="col-lg-6">
+          <h3>The Ultimate Flying Experience</h3>
+          <p>Indoor skydiving uses a vertical wind tunnel to create a column of air moving at high speeds, simulating the freefall experience of skydiving. Our state-of-the-art facility features:</p>
+          
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+              <i class="fas fa-check-circle" style="color: var(--color-success); font-size: 1.5rem;"></i>
+              <div>
+                <strong>Safe & Controlled</strong>
+                <p class="text-muted mb-0">Fly in a completely controlled environment with expert instructors</p>
+              </div>
+            </li>
+            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+              <i class="fas fa-check-circle" style="color: var(--color-success); font-size: 1.5rem;"></i>
+              <div>
+                <strong>All Skill Levels</strong>
+                <p class="text-muted mb-0">From first-time flyers to professional skydivers</p>
+              </div>
+            </li>
+            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+              <i class="fas fa-check-circle" style="color: var(--color-success); font-size: 1.5rem;"></i>
+              <div>
+                <strong>Year-Round Flying</strong>
+                <p class="text-muted mb-0">Weather-proof indoor facility, fly any day of the year</p>
+              </div>
+            </li>
+          </ul>
+          
+          <a href="./about.html" class="btn btn-secondary mt-3" data-testid="learn-more-about-btn">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Levels -->
+  <section class="section" style="background: var(--color-surface);" data-testid="experience-levels-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Choose Your Adventure</h2>
+        <p class="text-muted">We offer experiences tailored to every skill level</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="card" data-testid="beginner-card">
+          <div class="card-body">
+            <div class="feature-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3>First-Time Flyer</h3>
+            <p>Never flown before? No problem! Our certified instructors will guide you through every step. Includes safety briefing, gear, and assisted flight time.</p>
+            <ul style="text-align: left; color: var(--color-text-muted);">
+              <li>30-minute experience</li>
+              <li>Safety briefing included</li>
+              <li>All equipment provided</li>
+              <li>Ages 3 and up</li>
+            </ul>
+            <a href="./packages.html" class="btn btn-outline mt-3" data-testid="beginner-view-packages-btn">View Packages</a>
+          </div>
+        </div>
+        
+        <div class="card" data-testid="intermediate-card">
+          <div class="card-body">
+            <div class="feature-icon" style="background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>Advanced Training</h3>
+            <p>Ready to take your skills to the next level? Our training programs help you master advanced techniques and maneuvers.</p>
+            <ul style="text-align: left; color: var(--color-text-muted);">
+              <li>Multi-session packages</li>
+              <li>Advanced technique coaching</li>
+              <li>Video analysis</li>
+              <li>Progress tracking</li>
+            </ul>
+            <a href="./training.html" class="btn btn-outline mt-3" data-testid="advanced-view-training-btn">View Training</a>
+          </div>
+        </div>
+        
+        <div class="card" data-testid="group-card">
+          <div class="card-body">
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Group Experiences</h3>
+            <p>Perfect for team building, birthday parties, or corporate events. Create unforgettable memories with your group.</p>
+            <ul style="text-align: left; color: var(--color-text-muted);">
+              <li>Private tunnel time</li>
+              <li>Group discounts available</li>
+              <li>Party packages</li>
+              <li>Corporate team building</li>
+            </ul>
+            <a href="./experiences.html" class="btn btn-outline mt-3" data-testid="group-view-experiences-btn">View Experiences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Packages -->
+  <section class="section" data-testid="packages-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Popular Packages</h2>
+        <p class="text-muted">Choose the perfect package for your skill level and goals</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card" data-testid="first-flight-package">
+            <div class="card-body">
+              <div class="badge badge-primary mb-3">Beginner</div>
+              <h3>First Flight Experience</h3>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin: 1rem 0;">$79</div>
+              <p class="text-muted">Perfect for first-timers</p>
+              <ul style="list-style: none; padding: 0; text-align: left;">
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> 2 flights (1 minute each)</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Safety briefing</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> All equipment included</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Certificate of flight</li>
+              </ul>
+              <a href="./booking.html" class="btn btn-primary w-100 mt-3" data-testid="book-first-flight-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 2px solid var(--color-secondary);" data-testid="training-package">
+            <div class="badge badge-warning" style="position: absolute; top: 1rem; right: 1rem;">Most Popular</div>
+            <div class="card-body">
+              <div class="badge badge-primary mb-3">Intermediate</div>
+              <h3>Training Package</h3>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-secondary); margin: 1rem 0;">$299</div>
+              <p class="text-muted">5 progressive sessions</p>
+              <ul style="list-style: none; padding: 0; text-align: left;">
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> 5 training sessions</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Skill development</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Video analysis</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Progress certification</li>
+              </ul>
+              <a href="./booking.html" class="btn btn-secondary w-100 mt-3" data-testid="book-training-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card" data-testid="group-package">
+            <div class="card-body">
+              <div class="badge badge-success mb-3">Group</div>
+              <h3>Group Experience</h3>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin: 1rem 0;">$350</div>
+              <p class="text-muted">5 people included</p>
+              <ul style="list-style: none; padding: 0; text-align: left;">
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> 5 participants</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Private session</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Group photos</li>
+                <li style="margin-bottom: 0.75rem;"><i class="fas fa-check" style="color: var(--color-success);"></i> Party area access</li>
+              </ul>
+              <a href="./booking.html" class="btn btn-primary w-100 mt-3" data-testid="book-group-btn">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-4">
+        <a href="./packages.html" class="btn btn-outline btn-lg" data-testid="view-all-packages-btn">View All Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety & Certifications -->
+  <section class="section" style="background: var(--color-surface);" data-testid="safety-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Safety First, Always</h2>
+        <p class="text-muted">Your safety is our top priority</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3 col-sm-6 mb-4 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4>Certified Instructors</h4>
+          <p class="text-muted">All staff are fully certified and trained</p>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h4>Premium Equipment</h4>
+          <p class="text-muted">Top-quality, regularly maintained gear</p>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h4>Safety Briefings</h4>
+          <p class="text-muted">Comprehensive pre-flight training</p>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4 text-center">
+          <div class="feature-icon" style="margin: 0 auto 1rem;">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h4>Industry Certified</h4>
+          <p class="text-muted">Fully accredited facility</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" data-testid="testimonials-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>What Our Flyers Say</h2>
+        <p class="text-muted">Join thousands of satisfied customers</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card card-glass">
+            <div class="card-body">
+              <div style="color: var(--color-warning); margin-bottom: 1rem;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>"Absolutely incredible experience! The instructors were patient and made me feel safe the entire time. Can't wait to come back!"</p>
+              <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SM</div>
+                <div>
+                  <strong>Sarah Martinez</strong>
+                  <p class="text-muted mb-0" style="font-size: 0.875rem;">First-Time Flyer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card card-glass">
+            <div class="card-body">
+              <div style="color: var(--color-warning); margin-bottom: 1rem;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>"Perfect for our team building event. Everyone had a blast and we created amazing memories together. Highly recommend!"</p>
+              <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-secondary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">JC</div>
+                <div>
+                  <strong>James Chen</strong>
+                  <p class="text-muted mb-0" style="font-size: 0.875rem;">Corporate Group</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="card card-glass">
+            <div class="card-body">
+              <div style="color: var(--color-warning); margin-bottom: 1rem;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>"As a skydiving instructor, I use this facility for training. The tunnel is world-class and the coaching is top-notch."</p>
+              <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-success); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">EJ</div>
+                <div>
+                  <strong>Emily Johnson</strong>
+                  <p class="text-muted mb-0" style="font-size: 0.875rem;">Professional Skydiver</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white;" data-testid="cta-section">
+    <div class="container text-center">
+      <h2 style="color: white;">Ready to Defy Gravity?</h2>
+      <p style="font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem; color: white;">Book your flight today and experience the thrill of freefall</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="./booking.html" class="btn" style="background: white; color: var(--color-primary); font-weight: 600;" data-testid="cta-book-now-btn">
+          <i class="fas fa-calendar-check"></i>
+          Book Now
+        </a>
+        <a href="./contact.html" class="btn" style="background: transparent; color: white; border: 2px solid white;" data-testid="cta-contact-btn">
+          <i class="fas fa-phone"></i>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🪂 SKYVENTURE</h3>
+          <p>Experience the thrill of indoor skydiving in a safe, controlled environment. Fly without limits.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./experiences.html">Experiences</a></li>
+            <li><a href="./packages.html">Packages</a></li>
+            <li><a href="./training.html">Training</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./booking.html">Book a Flight</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Info</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.75rem;">
+              <i class="fas fa-map-marker-alt"></i>
+              123 Flight Avenue, Skyville, SK 12345
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <i class="fas fa-phone"></i>
+              (555) 123-4567
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <i class="fas fa-envelope"></i>
+              info@skyventure.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 SkyVenture Indoor Skydiving. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

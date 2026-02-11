@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your SkyVenture account to manage your bookings and view training videos.">
+  <title>Login - SkyVenture Indoor Skydiving</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/dark-mode.css">
+  <link rel="stylesheet" href="./assets/css/rtl.css">
+  
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+      padding: var(--space-4);
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 40%);
+      z-index: -1;
+    }
+    
+    .login-card {
+      width: 100%;
+      max-width: 450px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-2xl);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      padding: var(--space-8) var(--space-6);
+    }
+    
+    .login-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: var(--space-6);
+      text-decoration: none;
+    }
+    
+    .login-logo span:first-child {
+      font-size: 3rem;
+    }
+    
+    .login-logo span:last-child {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--color-primary);
+      letter-spacing: 0.05em;
+    }
+    
+    .social-login {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+    
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-background);
+      color: var(--color-text);
+      font-weight: 500;
+      font-size: 0.875rem;
+      transition: var(--transition-fast);
+    }
+    
+    .social-btn:hover {
+      background: var(--color-surface);
+      transform: translateY(-1px);
+    }
+    
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: var(--space-6);
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+    }
+    
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+    
+    .login-footer {
+      text-align: center;
+      margin-top: var(--space-6);
+      font-size: 0.875rem;
+    }
+    
+    .toggles-fixed {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="toggles-fixed">
+    <div class="toggle-group">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </button>
+      <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR">
+        <i class="fas fa-language"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div class="login-card">
+    <a href="index.html" class="login-logo">
+      <span>🪂</span>
+      <span>SKYVENTURE</span>
+    </a>
+    
+    <div class="text-center mb-5">
+      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome Back</h1>
+      <p>Log in to your account to continue</p>
+    </div>
+    
+    <div class="social-login">
+      <a href="#" class="social-btn">
+        <i class="fab fa-google text-danger"></i>
+        <span>Google</span>
+      </a>
+      <a href="#" class="social-btn">
+        <i class="fab fa-facebook text-primary"></i>
+        <span>Facebook</span>
+      </a>
+    </div>
+    
+    <div class="divider">or use email</div>
+    
+    <form data-validate action="./dashboard/dashboard.html">
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+      </div>
+      
+      <div class="form-group">
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <label class="form-label mb-0" for="password">Password</label>
+          <a href="#" style="font-size: 0.75rem;">Forgot Password?</a>
+        </div>
+        <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+      </div>
+      
+      <div class="form-group d-flex align-items-center gap-2 mb-4">
+        <input type="checkbox" id="remember" style="width: auto;">
+        <label class="form-label mb-0" for="remember" style="font-weight: 400;">Keep me logged in</label>
+      </div>
+      
+      <button type="submit" class="btn btn-primary w-100 mb-3">Sign In</button>
+    </form>
+    
+    <div class="login-footer">
+      <p>Don't have an account? <a href="./booking.html" style="font-weight: 600;">Sign up for a flight</a></p>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

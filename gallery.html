@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - SkyVenture</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/dark-mode.css">
+  <link rel="stylesheet" href="./assets/css/rtl.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="./index.html" class="navbar-brand">
+        <span>🪂</span>
+        <span>SKYVENTURE</span>
+      </a>
+      
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <!-- <li><a href="packages.html">Packages</a></li> -->
+        <li><a href="training.html">Training</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="./dashboard/dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li class="mobile-only"><a href="./booking.html" class="btn btn-primary btn-sm">Book Now</a></li>
+      </ul>
+      
+      <div class="navbar-actions">
+        <a href="./booking.html" class="btn btn-primary btn-sm desktop-only">Book Now</a>
+        
+        <div class="toggle-group">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle Dark/Light Mode">
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+          
+          <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL/LTR" title="Toggle Right-to-Left/Left-to-Right">
+            <i class="fas fa-language"></i>
+          </button>
+        </div>
+        
+        <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 120px;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h1 class="text-gradient-bold">Gallery</h1>
+        <p class="text-muted">Explore the thrill through our collection of photos and videos</p>
+      </div>
+
+      <div class="text-center mb-4">
+        <div style="display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <button class="btn btn-primary active" data-filter="all">All</button>
+          <button class="btn btn-outline" data-filter="flyers">Flyers</button>
+          <button class="btn btn-outline" data-filter="facility">Facility</button>
+          <button class="btn btn-outline" data-filter="training">Training</button>
+          <button class="btn btn-outline" data-filter="events">Events</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Flyers -->
+        <div class="col-md-4 mb-4" data-category="flyers">
+          <a href="booking.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1696127140771-ff7f4c939615?w=600" alt="First-Time Flyer" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">First-Time Flyer</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Beginner experiencing the thrill of flight</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-category="flyers">
+          <a href="booking.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1545167906-8973b526d11f?w=600" alt="Kids Flight" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Kids Flight</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Safe and fun flying for ages 3+</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-category="flyers">
+          <a href="booking.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600" alt="Group Flight" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Group Flight</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Share the experience with friends</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Facility -->
+        <div class="col-md-4 mb-4" data-category="facility">
+          <a href="about.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1621046590909-be3de07237a3?w=600" alt="Wind Tunnel" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Wind Tunnel</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">State-of-the-art vertical wind tunnel</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-category="facility">
+          <a href="about.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1590502593740-410757a8a816?w=600" alt="Gear Up Room" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Gear Up Room</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Professional flight suits and helmets</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Training -->
+        <div class="col-md-4 mb-4" data-category="training">
+          <a href="training.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1674558346850-7cbd4025ecff?w=600" alt="Professional Training" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Professional Training</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Advanced technique coaching for pros</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-category="training">
+          <a href="training.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1502139214982-d0ad755818d8?w=600" alt="Instructor Demo" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Instructor Demo</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Watch our world-class instructors fly</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Events -->
+        <div class="col-md-4 mb-4" data-category="events">
+          <a href="booking.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=600" alt="Night Flight" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Night Flight</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Experience flying with dynamic lighting</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4" data-category="events">
+          <a href="booking.html" class="text-decoration-none">
+            <div class="card h-100 feature-card-hover">
+              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600" alt="Team Competition" class="card-img-top" style="height: 250px; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="text-primary">Team Competition</h5>
+                <p class="text-muted" style="font-size: 0.875rem;">Annual indoor skydiving championship</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🪂 SKYVENTURE</h3>
+          <p>Experience the thrill of indoor skydiving in a safe, controlled environment. Fly without limits.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./experiences.html">Experiences</a></li>
+            <li><a href="./packages.html">Packages</a></li>
+            <li><a href="./training.html">Training</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./booking.html">Book a Flight</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact Info</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.75rem;">
+              <i class="fas fa-map-marker-alt"></i>
+              123 Flight Avenue, Skyville, SK 12345
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <i class="fas fa-phone"></i>
+              (555) 123-4567
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+              <i class="fas fa-envelope"></i>
+              info@skyventure.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 SkyVenture Indoor Skydiving. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
