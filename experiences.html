@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/dark-mode.css">
   <link rel="stylesheet" href="./assets/css/rtl.css">
+  <link rel="stylesheet" href="./assets/css/safety-style.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -61,10 +62,14 @@
     </div>
   </nav>
 
-  <section class="section" style="padding-top: 120px; background: var(--color-surface);">
-    <div class="container text-center">
-      <h1 class="text-gradient-bold">Flight Experiences</h1>
-      <p class="text-muted">Choose the perfect experience for your skill level</p>
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1455587734955-081b22074882?w=1600');">
+    <div class="container">
+      <h1>Flight Experiences</h1>
+      <p>Choose the perfect adventure for your skill level, from first-timers to pros.</p>
+      <ul class="breadcrumb-nav">
+        <li><a href="index.html">Home</a></li>
+        <li>Experiences</li>
+      </ul>
     </div>
   </section>
 
@@ -105,6 +110,113 @@
               </ul>
               <a href="booking.html" class="btn btn-primary">Book This Experience</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section" style="background: var(--color-surface);">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <img src="./assets/images/about1.png" alt="What to Expect" class="rounded w-full object-cover" style="height: 400px; border-radius: 1rem;">
+        </div>
+        <div class="col-lg-6">
+          <h2>What to Expect</h2>
+          <p>Prepare for an unforgettable adventure. Here's how your flight experience will unfold:</p>
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon bg-white text-primary rounded-circle shadow-sm" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div>
+              <h4>1. Check-In</h4>
+              <p class="text-muted mb-0">Arrive 45 minutes early to check in and complete waivers.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon bg-white text-primary rounded-circle shadow-sm" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div>
+              <h4>2. Training</h4>
+              <p class="text-muted mb-0">Join a class for a comprehensive safety briefing and flight instruction.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon bg-white text-primary rounded-circle shadow-sm" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <div>
+              <h4>3. Gear Up</h4>
+              <p class="text-muted mb-0">Suit up in your flight gear, helmet, and goggles.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3">
+            <div class="feature-icon bg-white text-primary rounded-circle shadow-sm" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-wind"></i>
+            </div>
+            <div>
+              <h4>4. Fly!</h4>
+              <p class="text-muted mb-0">Enter the tunnel and experience the thrill of freefall with your instructor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Frequently Asked Questions</h2>
+        <p class="text-muted">Everything you need to know before you fly</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Is indoor skydiving safe?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes! Indoor skydiving is incredibly safe. You fly in a controlled environment with a certified instructor right beside you at all times.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Are there age or weight restrictions?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Flyers can be as young as 3 years old. There is typically a weight limit of 300 lbs (136 kg) to ensure safe flight conditions.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What should I wear?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Wear comfortable clothes like a t-shirt, shorts/pants, and lace-up sneakers. We provide the flight suit that goes over your clothes.
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

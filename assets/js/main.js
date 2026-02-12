@@ -150,7 +150,13 @@ function initFormValidation() {
       });
       
       if (isValid) {
-        showNotification('Form submitted successfully!', 'success');
+        showNotification('Submitted successfully! Redirecting...', 'success');
+        const action = form.getAttribute('action');
+        if (action) {
+          setTimeout(() => {
+            window.location.href = action;
+          }, 1500);
+        }
         form.reset();
       } else {
         showNotification('Please fill in all required fields correctly.', 'error');
@@ -317,6 +323,85 @@ function initModals() {
   });
 }
 
+// Number Counter Animation
+function initCounterAnimation() {
+  const counters = document.querySelectorAll('.stat-number');
+  
+  const animate = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.getAttribute('data-count') || 0;
+    
+    // Calculate increment based on target to finish in ~2 seconds (60fps)
+    const increment = target / 100;
+
+    if (count < target) {
+      const nextCount = Math.min(count + increment, target);
+      counter.setAttribute('data-count', nextCount);
+      
+      const originalText = counter.getAttribute('data-original');
+      
+      if (originalText.includes('%')) {
+        counter.innerText = Math.floor(nextCount) + '%';
+      } else if (originalText.includes('+')) {
+        // Handle '10k+' style
+        if (originalText.toLowerCase().includes('k')) {
+          counter.innerText = Math.floor(nextCount) + 'k+';
+        } else {
+          counter.innerText = Math.floor(nextCount) + '+';
+        }
+      } else {
+        // Handle decimals like 4.9
+        if (originalText.includes('.')) {
+          counter.innerText = nextCount.toFixed(1);
+        } else {
+          counter.innerText = Math.floor(nextCount);
+        }
+      }
+      
+      requestAnimationFrame(() => animate(counter));
+    } else {
+      counter.innerText = counter.getAttribute('data-original');
+    }
+  };
+
+  const observerOptions = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  counters.forEach(counter => {
+    const originalText = counter.innerText;
+    const targetValue = parseFloat(originalText.replace(/[^0-9.]/g, ''));
+    
+    counter.setAttribute('data-original', originalText);
+    counter.setAttribute('data-target', targetValue);
+    counter.setAttribute('data-count', '0');
+    
+    // Set initial display
+    if (originalText.includes('%')) {
+      counter.innerText = '0%';
+    } else if (originalText.includes('+')) {
+      if (originalText.toLowerCase().includes('k')) {
+        counter.innerText = '0k+';
+      } else {
+        counter.innerText = '0+';
+      }
+    } else {
+      counter.innerText = '0';
+    }
+    
+    observer.observe(counter);
+  });
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
@@ -329,6 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryFilter();
   initMultiStepForm();
   initModals();
+  initCounterAnimation();
 });
 
 // Add fadeIn animation

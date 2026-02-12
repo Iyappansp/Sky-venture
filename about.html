@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/dark-mode.css">
   <link rel="stylesheet" href="./assets/css/rtl.css">
+  <link rel="stylesheet" href="./assets/css/safety-style.css">
 </head>
 <body>
   
@@ -65,10 +66,14 @@
   </nav>
 
   <!-- Page Header -->
-  <section class="section" style="padding-top: 120px; background: var(--color-surface);" data-testid="about-header">
-    <div class="container text-center">
-      <h1 class="text-gradient-bold">About SkyVenture</h1>
-      <p class="text-muted" style="font-size: 1.125rem; max-width: 720px; margin: 0 auto;">Pioneering the future of indoor flight experiences with safety, innovation, and unparalleled customer service.</p>
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1521655013084-38a85e22822a?w=1600');">
+    <div class="container">
+      <h1>About SkyVenture</h1>
+      <p>Pioneering the future of indoor flight experiences with safety, innovation, and unparalleled service.</p>
+      <ul class="breadcrumb-nav">
+        <li><a href="index.html">Home</a></li>
+        <li>About Us</li>
+      </ul>
     </div>
   </section>
 
@@ -182,7 +187,7 @@
   </section>
 
   <!-- Safety Standards -->
-  <section class="section" style="background: var(--color-surface);" data-testid="safety-standards-section">
+  <section class="section section-safety" data-testid="safety-standards-section">
     <div class="container">
       <div class="text-center mb-5">
         <h2>Safety Standards & Certifications</h2>
@@ -191,57 +196,73 @@
       
       <div class="row">
         <div class="col-lg-6 mb-4">
-          <h3>Industry Certifications</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-              <i class="fas fa-certificate" style="color: var(--color-success); font-size: 1.5rem;"></i>
-              <div>
-                <strong>FAA Approved Facility</strong>
-                <p class="text-muted mb-0">Fully certified by the Federal Aviation Administration</p>
+          <h3 class="mb-4">Industry Certifications</h3>
+          <div class="safety-list">
+            <div class="safety-item">
+              <div class="safety-icon cert">
+                <i class="fas fa-certificate"></i>
               </div>
-            </li>
-            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-              <i class="fas fa-certificate" style="color: var(--color-success); font-size: 1.5rem;"></i>
-              <div>
-                <strong>IBA Member</strong>
-                <p class="text-muted mb-0">International Bodyflight Association accredited</p>
+              <div class="safety-content">
+                <h4>FAA Approved Facility</h4>
+                <p>Fully certified by the Federal Aviation Administration</p>
               </div>
-            </li>
-            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-              <i class="fas fa-certificate" style="color: var(--color-success); font-size: 1.5rem;"></i>
-              <div>
-                <strong>USPA Affiliated</strong>
-                <p class="text-muted mb-0">United States Parachute Association partner</p>
+            </div>
+            
+            <div class="safety-item">
+              <div class="safety-icon cert">
+                <i class="fas fa-certificate"></i>
               </div>
-            </li>
-          </ul>
+              <div class="safety-content">
+                <h4>IBA Member</h4>
+                <p>International Bodyflight Association accredited</p>
+              </div>
+            </div>
+            
+            <div class="safety-item">
+              <div class="safety-icon cert">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="safety-content">
+                <h4>USPA Affiliated</h4>
+                <p>United States Parachute Association partner</p>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div class="col-lg-6 mb-4">
-          <h3>Safety Protocols</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.5rem;"></i>
-              <div>
-                <strong>Comprehensive Safety Briefings</strong>
-                <p class="text-muted mb-0">Every flyer receives thorough pre-flight training</p>
+          <h3 class="mb-4">Safety Protocols</h3>
+          <div class="safety-list">
+            <div class="safety-item">
+              <div class="safety-icon proto">
+                <i class="fas fa-check-circle"></i>
               </div>
-            </li>
-            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.5rem;"></i>
-              <div>
-                <strong>Equipment Maintenance</strong>
-                <p class="text-muted mb-0">Regular inspections and state-of-the-art gear</p>
+              <div class="safety-content">
+                <h4>Comprehensive Safety Briefings</h4>
+                <p>Every flyer receives thorough pre-flight training</p>
               </div>
-            </li>
-            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-              <i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.5rem;"></i>
-              <div>
-                <strong>Instructor-to-Student Ratio</strong>
-                <p class="text-muted mb-0">Maximum attention for every participant</p>
+            </div>
+            
+            <div class="safety-item">
+              <div class="safety-icon proto">
+                <i class="fas fa-check-circle"></i>
               </div>
-            </li>
-          </ul>
+              <div class="safety-content">
+                <h4>Equipment Maintenance</h4>
+                <p>Regular inspections and state-of-the-art gear</p>
+              </div>
+            </div>
+            
+            <div class="safety-item">
+              <div class="safety-icon proto">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="safety-content">
+                <h4>Instructor-to-Student Ratio</h4>
+                <p>Maximum attention for every participant</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

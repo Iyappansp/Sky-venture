@@ -19,6 +19,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/dark-mode.css">
@@ -75,25 +80,23 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero hero-bg-image" style="background-image: url('./assets/images/hero.png');">
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">
           <i class="fas fa-certificate"></i>
-          <span>World-Class Indoor Skydiving Experience</span>
+          <span>Premium Flight Facility</span>
         </div>
         
-        <h1>Defy Gravity. Experience Flight.</h1>
+        <!-- <h1 class="text-white">Experience The Ultimate <br><span>Freedom of Flight</span></h1> -->
         
-        <p>Feel the rush of freefall in a safe, controlled environment. No plane. No parachute. Just pure flying freedom. Perfect for beginners and pros alike.</p>
+        <p class="text-white-50">Defy gravity in our world-class vertical wind tunnel. Safe, exhilarating, and perfect for all ages. Your skydiving journey starts here.</p>
         
         <div class="hero-actions">
           <a href="./booking.html" class="btn btn-primary btn-lg" data-testid="hero-book-flight-btn">
-            <i class="fas fa-calendar-check"></i>
             Book Your Flight
           </a>
-          <a href="./experiences.html" class="btn btn-outline btn-lg" data-testid="hero-learn-more-btn">
-            <i class="fas fa-info-circle"></i>
+          <a href="./experiences.html" class="btn btn-outline btn-lg" data-testid="hero-learn-more-btn" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: white;">
             Learn More
           </a>
         </div>
@@ -156,54 +159,51 @@
       </div>
       
       <div class="features-grid">
-        <div class="card" data-testid="beginner-card">
-          <div class="card-body">
-            <div class="feature-icon">
-              <i class="fas fa-user"></i>
+        <div class="card overflow-hidden" data-testid="beginner-card">
+          <div class="position-relative" style="height: 180px;">
+            <img src="./assets/images/about1.png" alt="First-Time Flyer" class="w-full h-full object-cover">
+            <div class="position-absolute top-0 start-0 w-full h-full d-flex align-items-center justify-content-center bg-black bg-opacity-20 transition-all hover:bg-opacity-10">
+              <div class="feature-icon bg-white text-primary rounded-circle shadow-lg">
+                <i class="fas fa-user"></i>
+              </div>
             </div>
+          </div>
+          <div class="card-body">
             <h3>First-Time Flyer</h3>
-            <p>Never flown before? No problem! Our certified instructors will guide you through every step. Includes safety briefing, gear, and assisted flight time.</p>
-            <ul style="text-align: left; color: var(--color-text-muted);">
-              <li>30-minute experience</li>
-              <li>Safety briefing included</li>
-              <li>All equipment provided</li>
-              <li>Ages 3 and up</li>
-            </ul>
-            <a href="./packages.html" class="btn btn-outline mt-3" data-testid="beginner-view-packages-btn">View Packages</a>
+            <p>Never flown before? No problem! Our certified instructors will guide 2024 ou through every step. Includes safety briefing, gear, and assisted flight</p>
+            <a href="./experiences.html" class="btn btn-outline mt-3">Explore Now</a>
           </div>
         </div>
         
-        <div class="card" data-testid="intermediate-card">
-          <div class="card-body">
-            <div class="feature-icon" style="background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);">
-              <i class="fas fa-award"></i>
+        <div class="card overflow-hidden" data-testid="intermediate-card">
+          <div class="position-relative" style="height: 180px;">
+            <img src="./assets/images/about2.png" alt="Advanced Training" class="w-full h-full object-cover">
+            <div class="position-absolute top-0 start-0 w-full h-full d-flex align-items-center justify-content-center bg-black bg-opacity-20 transition-all hover:bg-opacity-10">
+              <div class="feature-icon bg-white text-secondary rounded-circle shadow-lg" style="background: linear-gradient(135deg, white 0%, #f1f5f9 100%);">
+                <i class="fas fa-award"></i>
+              </div>
             </div>
+          </div>
+          <div class="card-body">
             <h3>Advanced Training</h3>
             <p>Ready to take your skills to the next level? Our training programs help you master advanced techniques and maneuvers.</p>
-            <ul style="text-align: left; color: var(--color-text-muted);">
-              <li>Multi-session packages</li>
-              <li>Advanced technique coaching</li>
-              <li>Video analysis</li>
-              <li>Progress tracking</li>
-            </ul>
-            <a href="./training.html" class="btn btn-outline mt-3" data-testid="advanced-view-training-btn">View Training</a>
+            <a href="./training.html" class="btn btn-outline mt-3">View Training</a>
           </div>
         </div>
         
-        <div class="card" data-testid="group-card">
-          <div class="card-body">
-            <div class="feature-icon">
-              <i class="fas fa-users"></i>
+        <div class="card overflow-hidden" data-testid="group-card">
+          <div class="position-relative" style="height: 180px;">
+            <img src="./assets/images/ariport.webp" alt="Group Experiences" class="w-full h-full object-cover">
+            <div class="position-absolute top-0 start-0 w-full h-full d-flex align-items-center justify-content-center bg-black bg-opacity-20 transition-all hover:bg-opacity-10">
+              <div class="feature-icon bg-white text-primary rounded-circle shadow-lg">
+                <i class="fas fa-users"></i>
+              </div>
             </div>
+          </div>
+          <div class="card-body">
             <h3>Group Experiences</h3>
             <p>Perfect for team building, birthday parties, or corporate events. Create unforgettable memories with your group.</p>
-            <ul style="text-align: left; color: var(--color-text-muted);">
-              <li>Private tunnel time</li>
-              <li>Group discounts available</li>
-              <li>Party packages</li>
-              <li>Corporate team building</li>
-            </ul>
-            <a href="./experiences.html" class="btn btn-outline mt-3" data-testid="group-view-experiences-btn">View Experiences</a>
+            <a href="./experiences.html" class="btn btn-outline mt-3">Book Group</a>
           </div>
         </div>
       </div>
