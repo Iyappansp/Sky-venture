@@ -190,3 +190,95 @@
     margin-left: 0;
   }
 }
+
+/* Base Body Background for Dashboard */
+body {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+  min-height: 100vh;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] body {
+  background: var(--color-background) !important;
+  background-image: none !important;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .dashboard-sidebar,
+[data-theme="dark"] .dashboard-header {
+  background: rgba(30, 41, 59, 0.7); /* Match --glass-bg in dark mode */
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .card-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .table {
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: transparent; /* Ensure transparent background for cells so row hover works */
+  color: var(--color-text);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .table thead th {
+  color: var(--color-text);
+  border-bottom-color: var(--color-border);
+  background-color: var(--color-surface-dark); /* Distinct header background */
+  font-weight: 600;
+}
+
+[data-theme="dark"] .table tbody td {
+  color: var(--color-text-muted);
+  border-bottom-color: var(--color-border);
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+  color: var(--color-text);
+  background-color: var(--color-surface-dark); /* Highlight color on hover */
+}
+/* Ensure row hover works by targeting td in hover state if needed */
+[data-theme="dark"] .table-hover tbody tr:hover td {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .sidebar-brand {
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .sidebar-menu a {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .sidebar-menu a:hover,
+[data-theme="dark"] .sidebar-menu a.active {
+  background: rgba(0, 102, 255, 0.2);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .search-bar input {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .header-icon-btn {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .header-icon-btn:hover {
+  background: var(--color-surface-dark);
+  color: var(--color-primary);
+}

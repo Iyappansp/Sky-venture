@@ -138,10 +138,17 @@
 }
 
 /* Fix text visibility in dark mode for cards */
+/* Fix text visibility in dark mode */
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .section .text-muted,
 [data-theme="dark"] .card .text-muted {
   color: #CBD5E1 !important; /* light slate color */
 }
 
 [data-theme="dark"] .card {
   color: #F8FAFC;
+}
+
+[data-theme="dark"] body {
+  color: #F1F5F9;
 }

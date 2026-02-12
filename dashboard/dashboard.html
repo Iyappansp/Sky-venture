@@ -21,7 +21,7 @@
     <aside class="dashboard-sidebar" data-testid="dashboard-sidebar">
       <div class="sidebar-brand">
         <span>🪂</span>
-        <span>SKYVENTURE</span>
+        <span>SKY VENTURE</span>
       </div>
       
       <ul class="sidebar-menu">
@@ -56,10 +56,10 @@
       </ul>
       
       <div style="margin-top: auto; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-        <a href="../index.html" class="btn btn-outline w-100" data-testid="back-to-site-btn">
-          <i class="fas fa-arrow-left"></i>
-          Back to Site
-        </a>
+        <button id="logout-btn" class="btn btn-outline w-100" data-testid="logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
       </div>
     </aside>
     
@@ -98,22 +98,7 @@
             <span class="notification-badge">3</span>
           </div>
           
-          <div class="user-profile-dropdown dropdown">
-            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none" data-bs-toggle="dropdown">
-              <div class="user-avatar">AD</div>
-              <div class="d-none d-sm-block">
-                <p class="user-name">Admin User</p>
-                <p class="user-role">Super Admin</p>
-              </div>
-              <i class="fas fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="settings.html"><i class="fas fa-user-circle me-2"></i> Profile</a></li>
-              <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog me-2"></i> Settings</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-danger" href="../index.html"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
-            </ul>
-          </div>
+
         </div>
       </div>
       

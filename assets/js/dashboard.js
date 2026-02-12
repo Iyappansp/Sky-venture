@@ -314,6 +314,49 @@ dashboardStyles.textContent = `
 `;
 document.head.appendChild(dashboardStyles);
 
+// Logout Functionality
+function initLogout() {
+  // Inject Modal HTML
+  const modalHtml = `
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border: 1px solid var(--color-border); background: var(--color-background);">
+          <div class="modal-header" style="border-bottom: 1px solid var(--color-border);">
+            <h5 class="modal-title" style="color: var(--color-text);">Confirm Logout</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: var(--color-text) == '#F1F5F9' ? 'invert(1)' : 'none'"></button>
+          </div>
+          <div class="modal-body">
+            <p style="color: var(--color-text);">Are you sure you want to logout?</p>
+          </div>
+          <div class="modal-footer" style="border-top: 1px solid var(--color-border);">
+            <button type="button" class="btn btn-outline" data-bs-dismiss="modal">Cancel</button>
+            <a href="../login.html" class="btn btn-danger" style="background: var(--color-error); border: none; color: white;">Yes, Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+  // Attach Event Listener
+  const logoutBtn = document.getElementById('logout-btn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Check if bootstrap is available
+      if (typeof bootstrap !== 'undefined') {
+        const logoutModal = new bootstrap.Modal(document.getElementById('logoutModal'));
+        logoutModal.show();
+      } else {
+        // Fallback if bootstrap JS isn't loaded (though it should be)
+        if (confirm('Are you sure you want to logout?')) {
+          window.location.href = '../login.html';
+        }
+      }
+    });
+  }
+}
+
 // Initialize Dashboard
 document.addEventListener('DOMContentLoaded', () => {
   initSidebarToggle();
@@ -326,4 +369,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTableFilter();
   initStatusToggle();
   initFileUpload();
+  initLogout();
 });
