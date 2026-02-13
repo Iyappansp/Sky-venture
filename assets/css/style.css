@@ -87,12 +87,16 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
 }
 
 /* Typography */
@@ -106,31 +110,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(3rem, 6vw, 4.5rem);
-}
-
-h3 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
-/* ... existing code ... */
+h3 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
 
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 h6 {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 p {
@@ -442,7 +444,7 @@ img {
 }
 
 .btn-outline {
-  background: white;
+  background: transparent;
   color: var(--color-text);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
@@ -655,7 +657,7 @@ img {
   line-height: 1;
 }
 
-.process-card h3 {
+.process-card h2 {
   margin-top: var(--space-4);
   margin-bottom: var(--space-3);
   position: relative;
@@ -870,7 +872,7 @@ textarea.form-control {
   margin-bottom: var(--space-6);
 }
 
-.footer-brand h3 {
+.footer-brand h2 {
   color: white;
   margin-bottom: var(--space-2);
 }
@@ -920,6 +922,25 @@ textarea.form-control {
 .social-link:hover {
   background: var(--color-primary);
   color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+  color: var(--color-primary);
 }
 
 /* ============================================

@@ -6,6 +6,7 @@
   <meta name="description" content="Experience the thrill of indoor skydiving. Safe, controlled, and exhilarating flight experiences for all skill levels.">
   <meta name="keywords" content="indoor skydiving, skydiving facility, flight training, adventure sports">
   <title>SkyVenture - Indoor Skydiving Facility | Fly Without Limits</title>
+  <meta property="og:image" content="./assets/images/hero.png">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
@@ -28,6 +29,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/dark-mode.css">
   <link rel="stylesheet" href="./assets/css/rtl.css">
+  <link rel="stylesheet" href="./assets/css/safety.css">
 </head>
 <body>
   
@@ -43,6 +45,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="home2.html">Home 2</a></li>
         <li><a href="./about.html">About</a></li>
+        <li><a href="./how-it-works.html">How It Works</a></li>
         <li><a href="./experiences.html">Experiences</a></li>
         <!-- <li><a href="./packages.html">Packages</a></li> -->
         <li><a href="./training.html">Training</a></li>
@@ -61,7 +64,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
             <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12h2m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
           </button>
           
@@ -117,8 +120,8 @@
           <img src="https://images.unsplash.com/photo-1696127140771-ff7f4c939615?w=800" alt="Indoor Skydiving Experience" class="rounded" style="width: 100%; height: auto; border-radius: 1rem;">
         </div>
         <div class="col-lg-6">
-          <h3>The Ultimate Flying Experience</h3>
-          <p>Indoor skydiving uses a vertical wind tunnel to create a column of air moving at high speeds, simulating the freefall experience of skydiving. Our state-of-the-art facility features:</p>
+          <h2>The Ultimate Flying Experience</h2>
+          <p>Indoor skydiving uses a vertical wind tunnel to generate a powerful, precisely controlled column of air that simulates the true freefall experience of skydiving—without the need to jump from an aircraft. This innovative setup recreates the sensation of floating and maneuvering in mid-air, allowing participants to safely experience the thrill of flight in a fully supervised environment. Our state-of-the-art facility features a high-performance wind tunnel engineered for smooth and stable airflow, advanced safety systems with real-time monitoring, and certified professional instructors who provide personalized guidance for beginners and experienced flyers.</p>
           
           <ul style="list-style: none; padding: 0;">
             <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
@@ -150,6 +153,58 @@
     </div>
   </section>
 
+  <!-- How It Works Section -->
+  <section class="section" style="background: var(--color-surface); padding: 5rem 0;" data-testid="how-it-works-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Your Flight Experience</h2>
+        <p class="text-muted">From arrival to your first flight, here's what to expect</p>
+      </div>
+      
+      <div class="row text-center">
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-4 border-0 shadow-sm">
+            <div class="mb-3 text-primary" style="font-size: 2.5rem;">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h4>1. Check-In</h4>
+            <p class="text-muted">Arrive 1 hour early to check in and complete your waiver.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-4 border-0 shadow-sm">
+            <div class="mb-3 text-secondary" style="font-size: 2.5rem;">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h4>2. Training</h4>
+            <p class="text-muted">Attend a brief training session with your certified flight instructor.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-4 border-0 shadow-sm">
+            <div class="mb-3 text-primary" style="font-size: 2.5rem;">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <h4>3. Gear Up</h4>
+            <p class="text-muted">Put on your flight suit, helmet, and goggles. We provide everything!</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 p-4 border-0 shadow-sm">
+            <div class="mb-3 text-secondary" style="font-size: 2.5rem;">
+              <i class="fas fa-wind"></i>
+            </div>
+            <h4>4. Fly!</h4>
+            <p class="text-muted">Enter the wind tunnel and experience the thrill of bodyflight!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Experience Levels -->
   <section class="section" style="background: var(--color-surface);" data-testid="experience-levels-section">
     <div class="container">
@@ -160,49 +215,34 @@
       
       <div class="features-grid">
         <div class="card overflow-hidden" data-testid="beginner-card">
-          <div class="position-relative" style="height: 180px;">
-            <img src="./assets/images/about1.png" alt="First-Time Flyer" class="w-full h-full object-cover">
-            <div class="position-absolute top-0 start-0 w-full h-full d-flex align-items-center justify-content-center bg-black bg-opacity-20 transition-all hover:bg-opacity-10">
-              <div class="feature-icon bg-white text-primary rounded-circle shadow-lg">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
+          <div class="position-relative" style="height: 200px;">
+            <img src="./assets/images/about1.png" alt="First-Time Flyer" class="w-100 h-100" style="object-fit: cover;">
           </div>
           <div class="card-body">
-            <h3>First-Time Flyer</h3>
-            <p>Never flown before? No problem! Our certified instructors will guide 2024 ou through every step. Includes safety briefing, gear, and assisted flight</p>
+            <h2>First-Time Flyer</h2>
+            <p class="mt-3">Never flown before? No problem! Our certified instructors will guide you through every step. Includes safety briefing, gear, and assisted flight.</p>
             <a href="./experiences.html" class="btn btn-outline mt-3">Explore Now</a>
           </div>
         </div>
         
         <div class="card overflow-hidden" data-testid="intermediate-card">
-          <div class="position-relative" style="height: 180px;">
-            <img src="./assets/images/about2.png" alt="Advanced Training" class="w-full h-full object-cover">
-            <div class="position-absolute top-0 start-0 w-full h-full d-flex align-items-center justify-content-center bg-black bg-opacity-20 transition-all hover:bg-opacity-10">
-              <div class="feature-icon bg-white text-secondary rounded-circle shadow-lg" style="background: linear-gradient(135deg, white 0%, #f1f5f9 100%);">
-                <i class="fas fa-award"></i>
-              </div>
-            </div>
+          <div class="position-relative" style="height: 200px;">
+            <img src="./assets/images/about2.png" alt="Advanced Training" class="w-100 h-100" style="object-fit: cover;">
           </div>
           <div class="card-body">
-            <h3>Advanced Training</h3>
-            <p>Ready to take your skills to the next level? Our training programs help you master advanced techniques and maneuvers.</p>
+            <h2>Advanced Training</h2>
+            <p class="mt-3">Ready to take your skills to the next level? Our training programs help you master advanced techniques and maneuvers.</p>
             <a href="./training.html" class="btn btn-outline mt-3">View Training</a>
           </div>
         </div>
         
         <div class="card overflow-hidden" data-testid="group-card">
-          <div class="position-relative" style="height: 180px;">
-            <img src="./assets/images/ariport.webp" alt="Group Experiences" class="w-full h-full object-cover">
-            <div class="position-absolute top-0 start-0 w-full h-full d-flex align-items-center justify-content-center bg-black bg-opacity-20 transition-all hover:bg-opacity-10">
-              <div class="feature-icon bg-white text-primary rounded-circle shadow-lg">
-                <i class="fas fa-users"></i>
-              </div>
-            </div>
+          <div class="position-relative" style="height: 200px;">
+            <img src="./assets/images/ariport.webp" alt="Group Experiences" class="w-100 h-100" style="object-fit: cover;">
           </div>
           <div class="card-body">
-            <h3>Group Experiences</h3>
-            <p>Perfect for team building, birthday parties, or corporate events. Create unforgettable memories with your group.</p>
+            <h2>Group Experiences</h2>
+            <p class="mt-3">Perfect for team building, birthday parties, or corporate events. Create unforgettable memories with your group.</p>
             <a href="./experiences.html" class="btn btn-outline mt-3">Book Group</a>
           </div>
         </div>
@@ -223,7 +263,7 @@
           <div class="card" data-testid="first-flight-package">
             <div class="card-body">
               <div class="badge badge-primary mb-3">Beginner</div>
-              <h3>First Flight Experience</h3>
+              <h2>First Flight Experience</h2>
               <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin: 1rem 0;">$79</div>
               <p class="text-muted">Perfect for first-timers</p>
               <ul style="list-style: none; padding: 0; text-align: left;">
@@ -242,7 +282,7 @@
             <div class="badge badge-warning" style="position: absolute; top: 1rem; right: 1rem;">Most Popular</div>
             <div class="card-body">
               <div class="badge badge-primary mb-3">Intermediate</div>
-              <h3>Training Package</h3>
+              <h2>Training Package</h2>
               <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-secondary); margin: 1rem 0;">$299</div>
               <p class="text-muted">5 progressive sessions</p>
               <ul style="list-style: none; padding: 0; text-align: left;">
@@ -260,7 +300,7 @@
           <div class="card" data-testid="group-package">
             <div class="card-body">
               <div class="badge badge-success mb-3">Group</div>
-              <h3>Group Experience</h3>
+              <h2>Group Experience</h2>
               <div style="font-size: 2.5rem; font-weight: 700; color: var(--color-primary); margin: 1rem 0;">$350</div>
               <p class="text-muted">5 people included</p>
               <ul style="list-style: none; padding: 0; text-align: left;">
@@ -289,34 +329,41 @@
         <p class="text-muted">Your safety is our top priority</p>
       </div>
       
-      <div class="row">
-        <div class="col-md-3 col-sm-6 mb-4 text-center">
-          <div class="feature-icon" style="margin: 0 auto 1rem;">
+      <div class="safety-grid">
+        <!-- Feature 1 -->
+        <div class="safety-card">
+          <div class="safety-icon">
             <i class="fas fa-shield-alt"></i>
           </div>
           <h4>Certified Instructors</h4>
-          <p class="text-muted">All staff are fully certified and trained</p>
+          <p>All staff are fully certified by the International Bodyflight Association (IBA) and undergo rigorous training.</p>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4 text-center">
-          <div class="feature-icon" style="margin: 0 auto 1rem;">
+
+        <!-- Feature 2 -->
+        <div class="safety-card">
+          <div class="safety-icon">
             <i class="fas fa-hard-hat"></i>
           </div>
           <h4>Premium Equipment</h4>
-          <p class="text-muted">Top-quality, regularly maintained gear</p>
+          <p>We use top-of-the-line helmets, suits, and goggles. Our gear is inspected daily and regularly upgraded.</p>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4 text-center">
-          <div class="feature-icon" style="margin: 0 auto 1rem;">
+
+        <!-- Feature 3 -->
+        <div class="safety-card">
+          <div class="safety-icon">
             <i class="fas fa-clipboard-check"></i>
           </div>
           <h4>Safety Briefings</h4>
-          <p class="text-muted">Comprehensive pre-flight training</p>
+          <p>Every flyer receives a comprehensive pre-flight training session covering hand signals and body positions.</p>
         </div>
-        <div class="col-md-3 col-sm-6 mb-4 text-center">
-          <div class="feature-icon" style="margin: 0 auto 1rem;">
+
+        <!-- Feature 4 -->
+        <div class="safety-card">
+          <div class="safety-icon">
             <i class="fas fa-medal"></i>
           </div>
           <h4>Industry Certified</h4>
-          <p class="text-muted">Fully accredited facility</p>
+          <p>Our facility meets or exceeds all industry standards for wind tunnel safety and operation protocols.</p>
         </div>
       </div>
     </div>
@@ -423,7 +470,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3>🪂 SKY VENTURE</h3>
+          <h2>🪂 SKY VENTURE</h2>
           <p>Experience the thrill of indoor skydiving in a safe, controlled environment. Fly without limits.</p>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -473,7 +520,7 @@
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2024 SkyVenture Indoor Skydiving. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>&copy; 2025 SkyVenture Indoor Skydiving. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
       </div>
     </div>
   </footer>

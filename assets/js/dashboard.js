@@ -49,12 +49,63 @@ function initSidebarToggle() {
   const sidebar = document.querySelector('.dashboard-sidebar');
   const mainContent = document.querySelector('.dashboard-main');
   
+  // Create overlay if it doesn't exist
+  let overlay = document.querySelector('.dashboard-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'dashboard-overlay';
+    document.body.appendChild(overlay);
+    
+    // Add styles for overlay dynamically
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.zIndex = '1000';
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
+    overlay.style.transition = 'all 0.3s ease';
+  }
+
   if (sidebarToggle && sidebar) {
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('collapsed');
+    function toggleSidebar() {
+      sidebar.classList.toggle('active');
       if (mainContent) {
-        mainContent.classList.toggle('expanded');
+        mainContent.classList.toggle('active');
       }
+      
+      // Toggle Overlay
+      if (sidebar.classList.contains('active')) {
+        overlay.style.opacity = '1';
+        overlay.style.visibility = 'visible';
+      } else {
+        overlay.style.opacity = '0';
+        overlay.style.visibility = 'hidden';
+      }
+    }
+
+    sidebarToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleSidebar();
+    });
+
+    // Close when clicking overlay
+    overlay.addEventListener('click', () => {
+      if (sidebar.classList.contains('active')) {
+        toggleSidebar();
+      }
+    });
+
+    // Close when clicking a link in sidebar (mobile only)
+    const sidebarLinks = sidebar.querySelectorAll('a');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 992 && sidebar.classList.contains('active')) {
+          toggleSidebar();
+        }
+      });
     });
   }
 }
@@ -76,7 +127,7 @@ function renderDashboardStats() {
       <div class="stat-icon" style="background: ${stat.color}20; color: ${stat.color}">${stat.icon}</div>
       <div class="stat-content">
         <p class="stat-label">${stat.label}</p>
-        <h3 class="stat-value">${stat.value}</h3>
+        <h2 class="stat-value">${stat.value}</h2>
       </div>
     </div>
   `).join('');

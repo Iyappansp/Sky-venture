@@ -27,6 +27,16 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
 }
 
+[data-theme="dark"] body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] ::selection {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
 [data-theme="dark"] .section {
   background: var(--color-background);
 }
@@ -151,6 +161,27 @@
   color: #F8FAFC;
 }
 
+[data-theme="dark"] .stats-section {
+  background: var(--color-background);
+}
+
 [data-theme="dark"] body {
   color: #F1F5F9;
+}
+
+/* Safety Section Dark Mode */
+[data-theme="dark"] .safety-item,
+[data-theme="dark"] .safety-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+/* Home 2 Process Card Dark Mode */
+[data-theme="dark"] .process-card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .process-number {
+  color: rgba(255, 255, 255, 0.1);
 }
