@@ -991,7 +991,7 @@ textarea.form-control {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .hero {
     padding-top: 140px;
   }
@@ -1018,6 +1018,8 @@ textarea.form-control {
     background: var(--color-background);
     flex-direction: column;
     padding: var(--space-4);
+    overflow-y: auto; /* Fix for cut-off items on small screens */
+    padding-bottom: 100px; /* Extra space for scrolling */
     transition: var(--transition-base);
     box-shadow: var(--shadow-lg);
     z-index: 1000;

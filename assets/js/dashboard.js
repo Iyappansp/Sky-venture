@@ -102,7 +102,7 @@ function initSidebarToggle() {
     const sidebarLinks = sidebar.querySelectorAll('a');
     sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth < 992 && sidebar.classList.contains('active')) {
+        if (window.innerWidth < 1200 && sidebar.classList.contains('active')) {
           toggleSidebar();
         }
       });
