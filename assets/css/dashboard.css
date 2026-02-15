@@ -37,6 +37,7 @@
   font-size: 1.5rem;
   color: var(--color-primary);
   text-decoration: none; /* Add this to prevent underline on link */
+  white-space: nowrap;
 }
 
 .sidebar-brand:hover {

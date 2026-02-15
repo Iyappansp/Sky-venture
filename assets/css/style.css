@@ -5,7 +5,7 @@
 
 /* Import Fonts */
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
 
 /* ============================================
    CSS Variables / Design Tokens
@@ -40,7 +40,7 @@
   --glass-shadow: rgba(0, 0, 0, 0.08);
   
   /* Typography */
-  --font-heading: 'Outfit', sans-serif;
+  --font-heading: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   
   /* Spacing Scale */
@@ -115,11 +115,23 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem) !important;
+  font-weight: 800 !important;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2.8rem, 5vw, 4rem) !important;
+  font-weight: 900 !important;
+  margin-bottom: var(--space-4);
+  line-height: 1.2;
 }
 
 h3 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
 }
 
 
@@ -877,6 +889,18 @@ textarea.form-control {
   margin-bottom: var(--space-2);
 }
 
+.footer-logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.footer-brand p {
+  color: white;
+}
+
 .footer-links h4 {
   color: white;
   font-size: 1rem;
@@ -930,11 +954,15 @@ textarea.form-control {
   padding-top: var(--space-4);
   margin-top: var(--space-4);
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
+}
+
+.footer-bottom p {
+  color: white;
 }
 
 .footer-bottom a {
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   text-decoration: none;
   transition: var(--transition-fast);
 }
@@ -1012,12 +1040,14 @@ textarea.form-control {
     display: flex;
     position: fixed;
     top: 76px;
-    left: -100%;
+    left: auto;
+    right: -100%;
     width: 100%;
     height: calc(100vh - 76px);
     background: var(--color-background);
     flex-direction: column;
-    padding: var(--space-4);
+    /* Increased top padding to push items down */
+    padding: var(--space-8) var(--space-4) var(--space-4);
     overflow-y: auto; /* Fix for cut-off items on small screens */
     padding-bottom: 100px; /* Extra space for scrolling */
     transition: var(--transition-base);
@@ -1026,6 +1056,16 @@ textarea.form-control {
   }
   
   .navbar-menu.active {
+    right: 0;
+  }
+
+  /* RTL Support for Mobile Menu */
+  [dir="rtl"] .navbar-menu {
+    right: auto;
+    left: -100%;
+  }
+
+  [dir="rtl"] .navbar-menu.active {
     left: 0;
   }
   

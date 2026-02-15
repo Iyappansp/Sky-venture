@@ -7,7 +7,7 @@ const dashboardData = {
   stats: {
     totalBookings: 247,
     activePackages: 12,
-    totalRevenue: 98750,
+    totalRevenue: 987,
     totalUsers: 589
   },
   recentBookings: [
