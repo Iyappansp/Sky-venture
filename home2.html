@@ -82,15 +82,16 @@
 
   <!-- Hero Section -->
   <section class="hero text-center hero-alt hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600');">
-    <div class="container">
+    <div class="hero-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2;">
       <div class="hero-content mx-auto">
         <div class="hero-badge">
           <span>#1 Adventure Destination</span>
         </div>
         
-        <!-- <h1 class="text-white">Unleash Your Inner Aviator</h1> -->
+        <h1 class="text-white">Unleash Your Inner Aviator</h1>
         
-        <p class="text-white-50 mx-auto" style="margin-bottom: 2rem;">Experience the impossible in our state-of-the-art wind tunnel. The most advanced flight simulation on the planet.</p>
+        <p class="text-white mx-auto" style="margin-bottom: 2rem; font-size: 1.25rem; font-weight: 500; opacity: 1;">Experience the impossible in our state-of-the-art wind tunnel. The most advanced flight simulation on the planet.</p>
         
         <div class="hero-actions justify-content-center">
           <a href="./booking.html" class="btn btn-primary btn-lg">
@@ -184,34 +185,34 @@
       <div class="row g-4">
         <!-- Instructor 1 -->
         <div class="col-md-4">
-          <div class="card h-100">
+          <div class="card h-100 instructor-card overflow-hidden">
             <img src="assets/images/images.jpg" class="card-img-top" alt="Instructor" style="height: 300px; object-fit: cover;">
-            <div class="card-body text-center">
-              <h4 class="mb-1">Alex "Air" Jordan</h4>
-              <p style="color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">Lead Instructor</p>
-              <p class="text-muted small">10+ years of flight experience. Specializes in dynamic flying and coaching.</p>
+            <div class="card-body text-center p-4">
+              <h4>Alex "Air" Jordan</h4>
+              <span class="role-badge">Lead Instructor</span>
+              <p class="text-muted">10+ years of flight experience. Specializes in dynamic flying and coaching.</p>
             </div>
           </div>
         </div>
         <!-- Instructor 2 -->
         <div class="col-md-4">
-          <div class="card h-100">
+          <div class="card h-100 instructor-card overflow-hidden">
             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&h=500&fit=crop" class="card-img-top" alt="Instructor" style="height: 300px; object-fit: cover;">
-            <div class="card-body text-center">
-              <h4 class="mb-1">Sarah Chen</h4>
-              <p style="color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">Flight Coach</p>
-              <p class="text-muted small">Former competitive gymnast turned pro flyer. Expert in teaching kids.</p>
+            <div class="card-body text-center p-4">
+              <h4>Sarah Chen</h4>
+              <span class="role-badge">Flight Coach</span>
+              <p class="text-muted">Former competitive gymnast turned pro flyer. Expert in teaching kids.</p>
             </div>
           </div>
         </div>
         <!-- Instructor 3 -->
         <div class="col-md-4">
-          <div class="card h-100">
+          <div class="card h-100 instructor-card overflow-hidden">
             <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop" class="card-img-top" alt="Instructor" style="height: 300px; object-fit: cover;">
-            <div class="card-body text-center">
-              <h4 class="mb-1">Mike Ross</h4>
-              <p style="color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">Safety Officer</p>
-              <p class="text-muted small">Ensures every flight is safe and fun. Certified skydive master.</p>
+            <div class="card-body text-center p-4">
+              <h4>Mike Ross</h4>
+              <span class="role-badge">Safety Officer</span>
+              <p class="text-muted">Ensures every flight is safe and fun. Certified skydive master.</p>
             </div>
           </div>
         </div>

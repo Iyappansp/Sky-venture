@@ -32,6 +32,14 @@
   color: var(--color-text);
 }
 
+[data-theme="dark"] a {
+  color: var(--color-primary-light);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--color-primary);
+}
+
 [data-theme="dark"] ::selection {
   background-color: var(--color-primary);
   color: #ffffff;
@@ -74,6 +82,11 @@
   background: var(--color-surface-dark);
   border-color: var(--color-primary);
   color: var(--color-primary);
+}
+
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-secondary {
+  color: #000000 !important;
 }
 
 [data-theme="dark"] .footer {
