@@ -571,23 +571,23 @@ img {
   position: relative;
   z-index: 1;
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: 0.6rem 1.2rem;
-  background: white;
-  color: var(--color-primary);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  border-radius: 50px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  margin-bottom: var(--space-4);
+.hero-subtitle {
+  display: block;
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: var(--space-2);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.25em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle i {
+  display: none; /* Hide icon as it contributes to the 'label' look */
 }
 
 .hero h1 {
