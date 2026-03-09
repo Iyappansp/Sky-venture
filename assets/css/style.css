@@ -1123,6 +1123,15 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+  .stat-item {
+    padding: var(--space-2);
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  .stat-label {
+    font-size: 0.65rem;
+  }
   .navbar-container {
     padding: 0.5rem 0.25rem;
   }
